@@ -32,14 +32,14 @@ if (totalPar !== undefined) {
     }
 
     // Calculate the difference between the total score and total par
-    const parDifference = totalPar - totalScore;
+    const parDifference = totalPar - totalScore; // Corrected the subtraction order
 
     // Display the result based on the parDifference
     if (parDifference === 0) {
-        console.log(`Good game, ${playerName}. Your total par was: 0`);
+        alert(`Good game, ${playerName}. Your total par was: 0`);
     } else if (parDifference < 0) {
-        console.log(`Great job, ${playerName}! Your total par was: ${parDifference}`);
+        alert(`Nice try, ${playerName}... Your total par was: +${Math.abs(parDifference)}`);
     } else {
-        console.log(`Nice try, ${playerName}... Your total par was: -${parDifference}`);
+        alert(`Great job, ${playerName}! Your total par was: -${parDifference}`);
     }
 }
